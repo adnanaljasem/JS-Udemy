@@ -242,3 +242,31 @@
 // console.log(
 //   `${adnan.firstName} is ${adnan.calcAge} years old, and ${carLicense}`
 // );
+// const mark = {
+//   name: "Mark",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     return this.mass / this.height ** 2;
+//   },
+// };
+// const john = {
+//   name: "John",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     return this.mass / this.height ** 2;
+//   },
+// };
+// console.log(mark.calcBMI(), john.calcBMI());
+// mark.calcBMI() > john.calcBMI()
+//   ? console.log(
+//       `${mark.name}'s BMI (${mark.calcBMI()}) is bigger than ${
+//         john.name
+//       }'s BMI (${john.calcBMI()})`
+//     )
+//   : console.log(
+//       `${john.name}'s BMI (${john.calcBMI()}) is bigger than ${
+//         mark.name
+//       }'s BMI (${mark.calcBMI()})`
+//     );
