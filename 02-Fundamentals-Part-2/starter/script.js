@@ -202,9 +202,43 @@
 //   `${adnan.firstName} has ${adnan.friends.length} friends, and his best friend is called ${adnan.friends[0]}`
 // );
 //objects methods
-const adnan = {
-  firstName: "Adnan",
-  lastName: "Aljasem",
-  age: 30,
-  friends: ["Ahmad", "Tarek", "Mohammad"],
-};
+// const adnan = {
+//   firstName: "Adnan",
+//   lastName: "Aljasem",
+//   birthYear: 1991,
+//   friends: ["Ahmad", "Tarek", "Mohammad"],
+// hasDrinvresLicense: true,
+//   calcAge: function (birthYear) {
+//     return 2037 - birthYear;
+//   },
+// };
+// calcAge: function () {
+//   // console.log(this);
+//   return 2037 - this.birthYear;
+// // },
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()} years old and he has ${
+//       this.hasDrinvresLicense ? "a" : "no"
+//     } drivers license`;
+//   },
+// };
+// console.log(adnan.calcAge());
+// console.log(adnan.age);
+// console.log(adnan.getSummary());
+//challenge
+
+// if (adnan.hasDrinvresLicense === true) {
+//   let carLicense = "he has a drivers license";
+//   return carLicense;
+// } else {
+//   let carLicense = "he doesn't have a drivers license";
+//   return carLicense;
+// }
+
+// console.log(
+//   `${adnan.firstName} is ${adnan.calcAge} years old, and ${carLicense}`
+// );
