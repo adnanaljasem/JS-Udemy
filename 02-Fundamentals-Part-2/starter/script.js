@@ -131,25 +131,49 @@
 // console.log(ages);
 // arrays methods:
 
-const friends = ["Adnan", "Ahmad", "Peter"];
-//add elemnt to end of array ()returned the (new)length of the array
-friends.push("Addon");
-console.log(friends);
-//add element to the begainin of an array
-friends.unshift("Hello");
-console.log(friends);
-//delete elelmnt form array:
-friends.pop(); //last and no need for argument for deleteing last element
-//pop returns the named of poped element
-console.log(friends);
-//remove first element
-friends.shift(); //remove first //we dont need argument for removing
-console.log(friends);
+// const friends = ["Adnan", "Ahmad", "Peter"];
+// //add elemnt to end of array ()returned the (new)length of the array
+// friends.push("Addon");
+// console.log(friends);
+// //add element to the begainin of an array
+// friends.unshift("Hello");
+// console.log(friends);
+// //delete elelmnt form array:
+// friends.pop(); //last and no need for argument for deleteing last element
+// //pop returns the named of poped element
+// console.log(friends);
+// //remove first element
+// friends.shift(); //remove first //we dont need argument for removing
+// console.log(friends);
 
-//to see which position is the element :
-console.log(friends.indexOf("Adnan"));
-//true or false if it is inculded
-console.log(friends.includes("Adnan"));
-if (friends.includes("Adnan")) {
-  console.log("You have a friend called Peter");
-}
+// //to see which position is the element :
+// console.log(friends.indexOf("Adnan"));
+// //true or false if it is inculded
+// console.log(friends.includes("Adnan"));
+// if (friends.includes("Adnan")) {
+//   console.log("You have a friend called Adnan");
+// }
+
+const calcTip = function (bill) {
+  if (bill > 50 && bill < 300) {
+    tip = bill * 0.15;
+    return tip;
+  } else {
+    tip = bill * 0.2;
+    return tip;
+  }
+};
+console.log(calcTip(401));
+
+const bills = new Array(125, 555, 44);
+console.log(bills);
+
+// const tips = new Array(calcTip(125), calcTip(555), calcTip(44));
+// console.log(tips);
+const tipps = [];
+tipps.push(calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]));
+console.log(tipps);
+const total = [];
+
+total.push(bills[0] + tipps[0], bills[1] + tipps[1], bills[2] + tipps[2]);
+console.log(total);
