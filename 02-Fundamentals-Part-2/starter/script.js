@@ -270,3 +270,119 @@
 //         mark.name
 //       }'s BMI (${mark.calcBMI()})`
 //     );
+//looooooooooooops:
+//for loops keeps running while condition is true
+//
+//loop through arrays
+// const jonasArray = [
+//   "Jonas",
+//   "Aljasem",
+//   2021 - 1991,
+//   "student",
+//   ["Ahmad", "Saad", "Tarek"],
+// ];
+// for (let i = 0; i < jonasArray.length; i++) {
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+// let calcYears = [];
+// const years = [1991, 2002, 1999, 2020, 2021];
+// for (let i = 0; i < years.length; i++) {
+//   calcYears.push(2037 - years[i]);
+// }
+// console.log(calcYears);
+
+//continue and break statement
+// const jonasArray = [
+//   "Jonas",
+//   "Aljasem",
+//   2021 - 1991,
+//   "student",
+//   ["Ahmad", "Saad", "Tarek"],
+// ];
+// console.log("*******************only strings");
+// for (let i = 0; i < jonasArray.length; i++) {
+//   if (typeof jonasArray[i] !== "string") continue;
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+// console.log("*******************break at number");
+// for (let i = 0; i < jonasArray.length; i++) {
+//   if (typeof jonasArray[i] === "number") break;
+//   console.log(jonasArray[i], typeof jonasArray[i]);
+// }
+//loop backwords:
+// const jonasArray = [
+//   "Jonas",
+//   "Aljasem",
+//   2021 - 1991,
+//   "student",
+//   ["Ahmad", "Saad", "Tarek"],
+// ];
+// for (let i = jonasArray.length - 1; i >= 0; i--) {
+//   console.log(i, jonasArray[i], typeof jonasArray[i]);
+// }
+// for (let exercise = 1; exercise <= 3; exercise++) {
+//   console.log(`-------- Starting exercise ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise} Lifting weight reetition ${rep}`);
+//   }
+// }
+//While looooooooop:
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`çççççLifting weights repetition ${rep}`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`++++Lifting weights repetition ${rep}`);
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//   console.log(`You rooled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+
+//   if (dice === 6) console.log("loop is about to end..");
+// }
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86];
+let tips = [];
+let totals = [];
+let tip;
+const calcTip = function (bill) {
+  if (bill > 50 && bill < 300) {
+    tip = bill * 0.15;
+    return tip;
+  } else {
+    tip = bill * 0.2;
+    return tip;
+  }
+};
+console.log(calcTip(401));
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(calcTip(bills[i]) + bills[i]);
+}
+console.log(tips, totals);
+
+// const calcAverage = function (anyArray) {
+//   let sum = 0;
+//   for (let i = 0; i < anyArray.length; i++) {
+//     // sum = sum + arr[i];
+//     sum += anyArray[i];
+//   }
+//   return sum; // anyArray.length;
+// };
+// console.log(calcAverage([2, 3, 7]));
+// console.log(calcAverage(totals));
+// console.log(calcAverage(tips));
+
+const arveageAnyArray = function (anyArray) {
+  let sum = 0;
+  for (let i = 0; i < anyArray.length; i++) {
+    sum = sum + anyArray[i];
+  }
+  return sum / anyArray.length;
+};
+console.log(arveageAnyArray([2, 2, 3, 3, 3, 3, 3, 99]));
