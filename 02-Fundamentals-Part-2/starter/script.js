@@ -378,11 +378,11 @@ console.log(tips, totals);
 // console.log(calcAverage(totals));
 // console.log(calcAverage(tips));
 
-const arveageAnyArray = function (anyArray) {
-  let sum = 0;
-  for (let i = 0; i < anyArray.length; i++) {
-    sum = sum + anyArray[i];
-  }
-  return sum / anyArray.length;
-};
-console.log(arveageAnyArray([2, 2, 3, 3, 3, 3, 3, 99]));
+// const arveageAnyArray = function (anyArray) {
+//   let sum = 0;
+//   for (let i = 0; i < anyArray.length; i++) {
+//     sum = sum + anyArray[i];
+//   }
+//   return sum / anyArray.length;
+// };
+// console.log(arveageAnyArray([2, 2, 3, 3, 3, 3, 3, 99]));
