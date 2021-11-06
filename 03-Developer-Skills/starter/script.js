@@ -19,14 +19,24 @@
 // };
 // const emplitude = calcTempAmplitude(temperatures);
 // console.log(emplitude);
-const measureKelvin = function () {
-  const measurement = {
-    type: "temp",
-    unit: "cels",
-    value: prompt("Degrees celsius:"),
-  };
-  console.log(typeof measurement.value);
-  const kelvin = Number(measurement.value) + 273;
-  return kelvin;
+// const measureKelvin = function () {
+//   const measurement = {
+//     type: "temp",
+//     unit: "cels",
+//     value: prompt("Degrees celsius:"),
+//   };
+//   console.log(typeof measurement.value);
+//   const kelvin = Number(measurement.value) + 273;
+//   return kelvin;
+// };
+// console.log(measureKelvin());
+//#Challenge
+const data1 = [17, 21, 23];
+const printForecast = function (arr) {
+  let myString = "";
+  for (let i = 0; i < arr.length; i++) {
+    myString = myString + `${arr[i]}°C in ${i + 1} days...`;
+  }
+  console.log("..." + myString);
 };
-console.log(measureKelvin());
+printForecast(data1);
