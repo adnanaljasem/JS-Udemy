@@ -31,12 +31,12 @@
 // };
 // console.log(measureKelvin());
 //#Challenge
-const data1 = [17, 21, 23];
-const printForecast = function (arr) {
-  let myString = "";
-  for (let i = 0; i < arr.length; i++) {
-    myString = myString + `${arr[i]}°C in ${i + 1} days...`;
-  }
-  console.log("..." + myString);
-};
-printForecast(data1);
+// const data1 = [17, 21, 23];
+// const printForecast = function (arr) {
+//   let myString = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     myString = myString + `${arr[i]}°C in ${i + 1} days...`;
+//   }
+//   console.log("..." + myString);
+// };
+// printForecast(data1);
