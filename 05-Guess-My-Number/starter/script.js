@@ -9,7 +9,11 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 console.log(secretNumber);
 let score = 20;
 let highScore = 0;
-document.querySelector('.number').textContent = secretNumber;
+//to make my code DRY I'll make a function to display message and call whenever I need
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+document.querySelector('.number').textContent = '?';
 //if you want to show the secrest number:
 // document.querySelector('.number').textContent = secretNumber;
 document.querySelector('.check').addEventListener('click', function () {
@@ -18,10 +22,10 @@ document.querySelector('.check').addEventListener('click', function () {
   console.log(guess, typeof guess);
   //When there is no input
   if (!guess) {
-    document.querySelector('.message').textContent = 'No Number';
+    displayMessage('No Number');
   } //When player wins:
   else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = "That's Correct!";
+    displayMessage("That's Correct!");
     document.querySelector('body').style.backgroundColor = 'green';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secretNumber;
@@ -30,35 +34,45 @@ document.querySelector('.check').addEventListener('click', function () {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
-    //If the guessed number is higher:
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     //to reduce the score number with each try until losing the game
     if (score > 1) {
-      document.querySelector('.message').textContent = "It's Heigher";
+      displayMessage(guess > secretNumber ? "It's Higher" : "It's Smaller");
       score--;
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent = 'You lost!';
       document.querySelector('.score').textContent = 0;
     }
-    //If the guessed nuber is lower:
-  } else if (guess < secretNumber) {
-    //Also to reduce the score number with each try until losing the game:
-    if (score > 1) {
-      document.querySelector('.message').textContent = "It's Lower";
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'You lost!';
-      document.querySelector('.score').textContent = 0;
-    }
+    //   //If the guessed number is higher:
+    // } else if (guess > secretNumber) {
+    //   //to reduce the score number with each try until losing the game
+    //   if (score > 1) {
+    //     document.querySelector('.message').textContent = "It's Heigher";
+    //     score--;
+    //     document.querySelector('.score').textContent = score;
+    //   } else {
+    //     document.querySelector('.message').textContent = 'You lost!';
+    //     document.querySelector('.score').textContent = 0;
+    //   }
+    //   //If the guessed nuber is lower:
+    // } else if (guess < secretNumber) {
+    //   //Also to reduce the score number with each try until losing the game:
+    //   if (score > 1) {
+    //     document.querySelector('.message').textContent = "It's Lower";
+    //     score--;
+    //     document.querySelector('.score').textContent = score;
+    //   } else {
+    //     document.querySelector('.message').textContent = 'You lost!';
+    //     document.querySelector('.score').textContent = 0;
+    //   }
   }
 });
 const resetBtn = document.querySelector('.again');
 resetBtn.addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  document.querySelector('.number').textContent = secretNumber;
+  document.querySelector('.number').textContent = '?';
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.message').textContent = 'Start guessing';
   document.querySelector('.number').style.width = '15rem';
